@@ -10,27 +10,29 @@ int main()
     
     if(menu==1) //Enter Rotation Cipher section
     {
-        printf("you selected Rotation Cipher\n");
+        printf("You selected Rotation Cipher!\n");
     }
+
     if(menu==2)  // Enters Substitution Cipher section
     {
-        printf("you selected Substitution Cipher\n");
-    }   
+        printf("You selected Substitution Cipher!\n  ");
+    }
+
     if(menu==3) // quits program
     {
-        printf("Quitting...\n");
-        return 0;
+       printf("Quitting...\n  ");
+       return 0;
     }
-    if(menu>3 || menu<=0) //if menu anything except 1 2 or 3 print
-    {
-     printf("invalid choice, please selected a number 1, 2 or 3\n") ;  
-    }
+    
+    if(menu>3 || menu<=0) //if menu anything except 1 2 or 3 print.
+        printf("invalid choice, please selected a number 1, 2 or 3\n  ");  
+     
 }
 
 //rotation cipher:
 
 /*initialise variables or Array
-define rotation amount (Key) //rotate by 1 e.g a=b, b=c... ??
+define rotation amount (Key) //rotate by 1 e.g a=.b, b=c... ??
 enter message text // read message in
 read key 
 encrypt message // encyrypt using rotation
