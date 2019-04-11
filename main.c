@@ -7,17 +7,17 @@ int main()
     printf("Enter a number to Select a Menu: 1.Rotation Cipher    2.Substitution Cipher   3.Quit\n\n");
    
     scanf("%d", &menu); //scans which number input for choosing menu
-    
+    int k = 12;
     if(menu==1) //Enter Rotation Cipher section
     {
         printf("You selected Rotation Cipher!\nRunning program...\n\n");
         
         int r;// value representing rotation
         int x; //value for upcoming switch statement
-        char text[20]; // string containing text
+        unsigned char text[50]; // string containing text
         
         printf("Enter Text: \n");
-        scanf("%s", &text); //scans entered text
+        scanf(" %[^\n]s", &text); //scans entered text
         printf("You Entered: %s\n\n", text);
         
         printf("Please select an option: 1. Encryption      2. Decryption \n\n");
@@ -25,12 +25,35 @@ int main()
         
         switch(x) // selects a case based off integer read from previous scanf()
         {
-            case 1:
-               for(r = 0; (r < 20 && text[r] != '\0'); r++) // while the rotation is within the array size, incriment and substitute each ascii value
-                text[r] = text[r] + 1; //is the key for rotation. Rotates by int value 
-
+            case 1: // encryption case
+                for(r = 0; (r < 50 && text[r] != '\0'); r++)
+                { // while the rotation is within the array size, incriment and substitute each ascii value
+                    text[r] = text[r] + k; //is the key for rotation. Rotates by int value
+                
+                  
+                if(((int)text[r])>122)
+                {
+                    text[r]=((text[r]-97)%26)+97; // rotates values back around i.e 'z' becomes 'a' if rotation by 1
+                }
+                     if(text[r]==32)
+                ;
+                }
             printf("Encrpted Text: %s\n", text);
             break;
+            
+            case 2: //decryption case
+                for(r = 0; (r < 50 && text[r] != '\0'); r++) 
+                {
+                    text[r] = text[r] - k; // decrypts with rotation key
+                
+                if(((int)text[r])>122) 
+                {
+                    text[r]=((text[r]-97)%26)+97; 
+                }
+                }
+            printf("Decrypted Text: %s\n", text);
+            break;
+                
             
                 
         }
