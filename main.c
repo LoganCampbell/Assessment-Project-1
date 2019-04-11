@@ -27,10 +27,10 @@ int main()
         {
             case 1:
                for(r = 0; (r < 20 && text[r] != '\0'); r++) // while the rotation is within the array size, incriment and substitute each ascii value
-        text[r] = text[r] + 1; //is the key for rotation. Rotates by int value 
+                text[r] = text[r] + 1; //is the key for rotation. Rotates by int value 
 
-      printf("\nEncrypted string: %s\n", text);
-      break;
+            printf("\nEncrypted string: %s\n", text);
+            break;
                 
         }
 //rotation cipher:
