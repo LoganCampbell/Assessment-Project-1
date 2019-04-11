@@ -16,7 +16,7 @@ int main()
         int x; //value for upcoming switch statement
         char text[20]; // string containing text
         
-        printf("Enter Text IN CAPTIALS: \n");
+        printf("Enter Text: \n");
         scanf("%s", &text); //scans entered text
         printf("You Entered: %s\n\n", text);
         
@@ -29,7 +29,7 @@ int main()
                for(r = 0; (r < 20 && text[r] != '\0'); r++) // while the rotation is within the array size, incriment and substitute each ascii value
                 text[r] = text[r] + 1; //is the key for rotation. Rotates by int value 
 
-            printf("\nEncrypted string: %s\n", text);
+            printf("Encrpted Text: %s\n", text);
             break;
                 
         }
