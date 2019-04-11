@@ -27,9 +27,10 @@ int main()
         {
             case 1:
                 for(r=0; (r<20 && text[r] !='\0'); r++);
-                    text[r]=text[r]+1;
+                    text[r]=text[r]+2;
                 printf("Text encrypted to: %s\n", text);
                 break;
+                
         }
 //rotation cipher:
          
