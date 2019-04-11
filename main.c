@@ -31,6 +31,7 @@ int main()
 
             printf("Encrpted Text: %s\n", text);
             break;
+            
                 
         }
 //rotation cipher:
