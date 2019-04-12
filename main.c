@@ -67,15 +67,9 @@ int main()
                 if(((int)text[r])>90)
                 {
                      if(text[r]==32)   ;             
-                     
-                    
-                   
-                     
-                    text[r]=((text[r]-65)%26)+65; // rotates values back around i.e 'z' becomes 'a' if rotation by 1
-                    if(text[r]<'65')
-                     text[r]=text[r]+26;
+                          
                 }
-                  
+                 
                 }
             printf("Encrpted Text: %s\n", text);
             break;
