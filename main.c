@@ -222,7 +222,6 @@ int main()
             else if(c=='Z')
                 c=alphabet[25];
                 
-          
             
         }
         printf("%c", c); //prints newly encrypted array
